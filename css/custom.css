@@ -1,10 +1,10 @@
-/*body {
+body {
   background-color: #ffdc00;
-}*/
+}
 
 .section {
-  height: 1000px;
-  padding-top: 300px;
+  min-height: 500px;
+  padding-top: 152px;
 }
 
 .projects:not(:last-child) {
@@ -12,19 +12,22 @@
 }
 
 .section-header {
+  display: none;
   padding: 50px 0;
   text-align: center;
-  display: none;
 }
 
 .with-fixed-header .section-header {
   display: block;
+  left: 0;
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
   z-index: 1;
-  /*background-color: red;*/
+}
+
+#video {
+  max-height: 550px;
 }
 
 #who-we-are, #who-we-are .section-header {
@@ -43,16 +46,16 @@
   background-color: #F5D69D;
 }
 
-/*.section:first-child, .with-fixed-header > .container {
-  margin-top: 172px;
-}*/
-
 /* Overriding Skeleton */
 
 input[type="submit"].button-primary {
   background-color: #222;
   border-color: #222;
   color: #fff;
+}
+
+h2 {
+  margin: 0;
 }
 
 /* Responsive video */
