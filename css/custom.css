@@ -1,0 +1,83 @@
+/*body {
+  background-color: #ffdc00;
+}*/
+
+.section {
+  height: 1000px;
+  padding-top: 300px;
+}
+
+.projects:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.section-header {
+  padding: 50px 0;
+  text-align: center;
+  display: none;
+}
+
+.with-fixed-header .section-header {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  /*background-color: red;*/
+}
+
+#who-we-are, #who-we-are .section-header {
+  background-color: #ffdc00;
+}
+
+#projects, #projects .section-header {
+  background-color: #E0759D;
+}
+
+#technology, #technology .section-header {
+  background-color: #6A92AA;
+}
+
+#contact, #contact .section-header {
+  background-color: #F5D69D;
+}
+
+/*.section:first-child, .with-fixed-header > .container {
+  margin-top: 172px;
+}*/
+
+/* Overriding Skeleton */
+
+input[type="submit"].button-primary {
+  background-color: #222;
+  border-color: #222;
+  color: #fff;
+}
+
+/* Responsive video */
+
+.js-video {
+  height: 0;
+  margin-bottom: 10px;
+  overflow: hidden;
+  padding-bottom: 67.5%;
+  padding-top: 25px;
+  position: relative;
+}
+
+.js-video.widescreen {
+  padding-bottom: 56.34%;
+}
+
+.js-video.vimeo {
+  padding-top: 0;
+}
+
+.js-video embed, .js-video iframe, .js-video object, .js-video video {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
