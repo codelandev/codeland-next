@@ -1,5 +1,11 @@
 body {
   background-color: #1A1A1A;
+  font-family: Lato, Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6,
+legend, input[type="submit"], label, strong {
+  letter-spacing: 0.25rem;
 }
 
 .logo, .manifesto {
@@ -22,7 +28,9 @@ body {
   top: 20px;
 }
 
-.section-anchor, .section-anchor:hover {
+.section-anchor,
+.section-anchor:hover,
+.section-anchor.active {
   color: #F3D430;
 }
 
@@ -30,9 +38,11 @@ body {
   padding: 5px 10px;
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
-.section-anchor:hover {
+.section-anchor:hover,
+.section-anchor.active {
   background-color: #1A1A1A;
 }
 
@@ -104,6 +114,7 @@ body {
   font-size: 1.8rem;
   height: 55px;
   left: 10px;
+  letter-spacing: normal;
   padding: 10px 20px;
   position: absolute;
   text-transform: uppercase;
