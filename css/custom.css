@@ -15,7 +15,7 @@ legend, input[type="submit"], label, strong {
 
 .logo {
   left: 30px;
-  top: 20px;
+  top: 35px;
   width: 60px;
 }
 
@@ -57,9 +57,11 @@ legend, input[type="submit"], label, strong {
 
 .section-header {
   display: none;
-  padding: 50px 0;
+  padding: 65px 0;
   text-align: center;
   text-transform: uppercase;
+  background-image: url('../imgs/header-bg.svg');
+  background-repeat: no-repeat;
 }
 
 .with-fixed-header .section-header {
