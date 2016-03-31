@@ -15,10 +15,10 @@ $(document).ready(function() {
   var height = $(".section").outerHeight();
 
   $(window).scroll(function() {
+    $(".section").removeClass("with-fixed-header")
     var scrolledPast = divs.filter(function(_index, elem) {
       return elem.bottom < $(window).scrollTop() + headerHeight;
     });
-    $(".section").removeClass("with-fixed-header")
     $(divs[scrolledPast.length].section).addClass("with-fixed-header")
   });
 
