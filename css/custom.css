@@ -60,8 +60,18 @@ legend, input[type="submit"], label, strong {
   padding: 65px 0;
   text-align: center;
   text-transform: uppercase;
-  background-image: url('../imgs/header-bg.svg');
-  background-repeat: no-repeat;
+}
+
+.header-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: none;
+}
+
+.with-fixed-header .header-bg {
+  display: block;
 }
 
 .with-fixed-header .section-header {
