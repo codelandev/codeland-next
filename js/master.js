@@ -1,7 +1,4 @@
 $(document).ready(function() {
-
-  // $("section:first").addClass("with-fixed-header");
-
   var headerHeight = $(".section-header").outerHeight()
 
   var divs = $(".section").map(function(_index, section) {
@@ -19,7 +16,11 @@ $(document).ready(function() {
       return elem.bottom < $(window).scrollTop() + headerHeight;
     });
     var selected = $(divs[scrolledPast.length].section)
+    var selectedAnchor = $(".section-anchor[href='#" + selected.attr("id") + "']")
+    $(".section-anchor").not(selectedAnchor).removeClass("active")
     $(".section").not(selected).removeClass("with-fixed-header")
+
+    selectedAnchor.addClass("active")
     selected.addClass("with-fixed-header")
   });
 

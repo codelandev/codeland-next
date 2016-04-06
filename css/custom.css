@@ -28,10 +28,14 @@ legend, input[type="submit"], label, strong {
   top: 20px;
 }
 
-.section-anchor,
+.section-anchor {
+  color: #F3D430;
+}
+
 .section-anchor:hover,
 .section-anchor.active {
-  color: #F3D430;
+  background-color: #F3D430;
+  color: #222222;
 }
 
 .section-anchor {
@@ -39,11 +43,6 @@ legend, input[type="submit"], label, strong {
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 600;
-}
-
-.section-anchor:hover,
-.section-anchor.active {
-  background-color: #1A1A1A;
 }
 
 .section {
@@ -85,6 +84,7 @@ legend, input[type="submit"], label, strong {
 
 #home {
   text-align: right;
+  background-color: #222222;
 }
 
 .home-container {
@@ -93,10 +93,6 @@ legend, input[type="submit"], label, strong {
 
 #video {
   max-height: 550px;
-}
-
-#home {
-  background-color: #222222;
 }
 
 #who-we-are {
