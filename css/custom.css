@@ -104,7 +104,8 @@ legend, input[type="submit"], label, strong {
   margin-top: 150px;
 }
 
-#projects .content {
+#projects .content,
+#technology .content {
   margin-top: 50px;
 }
 
@@ -139,6 +140,43 @@ legend, input[type="submit"], label, strong {
 #technology {
   background-color: #2D7A7E;
   color: #F3D430;
+}
+
+.technology-anchors {
+  list-style: none;
+  position: absolute;
+  right: 0;
+  text-align: right;
+  top: 0;
+}
+
+.technology-anchor {
+  background-color: #3C9AA0;
+  color: #222222;
+  display: inline-block;
+  font-size: 2.2rem;
+  font-weight: 800;
+  margin-bottom: 1px;
+  padding: 10px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.technology-anchor:hover {
+  padding-right: 80px;
+  color: #222222;
+}
+
+.technology-anchor:hover:after {
+  content: '+';
+  font-size: 5rem;
+  right: 37px;
+  position: absolute;
+  top: -15px;
+  font-weight: 600;
+  color: #F3D430;
+  z-index: 1;
 }
 
 #contact {
