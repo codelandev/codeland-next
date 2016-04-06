@@ -14,8 +14,8 @@ legend, input[type="submit"], label, strong {
 }
 
 .logo {
-  left: 30px;
-  top: 35px;
+  left: 20px;
+  top: 20px;
   width: 60px;
 }
 
@@ -23,7 +23,7 @@ legend, input[type="submit"], label, strong {
   font-size: 1.5rem;
   line-height: 1.3;
   list-style-type: none;
-  right: 30px;
+  right: 15px;
   text-align: right;
   top: 20px;
 }
@@ -47,7 +47,7 @@ legend, input[type="submit"], label, strong {
 }
 
 .section {
-  min-height: 500px;
+  min-height: 600px;
   padding-top: 152px;
 }
 
@@ -66,7 +66,7 @@ legend, input[type="submit"], label, strong {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
+  width: 101%;
   display: none;
 }
 
@@ -83,19 +83,31 @@ legend, input[type="submit"], label, strong {
   z-index: 1;
 }
 
+#home {
+  text-align: right;
+}
+
+.home-container {
+  margin-top: 150px;
+}
+
 #video {
   max-height: 550px;
 }
 
-#who-we-are, #who-we-are .section-header {
-  background-color: #1A1A1A;
+#home {
+  background-color: #222222;
 }
 
 #who-we-are {
+  background-color: #1A1A1A;
+}
+
+#home, #who-we-are {
   color: #F3D430;
 }
 
-#projects, #projects .section-header {
+#projects {
   background-color: #E0759D;
 }
 
@@ -103,12 +115,32 @@ legend, input[type="submit"], label, strong {
   color: #222222;
 }
 
-#technology, #technology .section-header {
+#technology {
   background-color: #6A92AA;
 }
 
-#contact, #contact .section-header {
+#contact {
   background-color: #F5D69D;
+}
+
+.main-title {
+  height: 30px;
+  position: relative;
+  text-align: right;
+}
+
+.logo-lettering {
+  position: absolute;
+  right: 0;
+}
+
+.slogan {
+  font-size: 6.2rem;
+  letter-spacing: 1.1rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  position: relative;
+  right: -10px;
 }
 
 .projects .columns:not(:first-child) {

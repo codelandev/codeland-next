@@ -15,11 +15,12 @@ $(document).ready(function() {
   var height = $(".section").outerHeight();
 
   $(window).scroll(function() {
-    $(".section").removeClass("with-fixed-header")
     var scrolledPast = divs.filter(function(_index, elem) {
       return elem.bottom < $(window).scrollTop() + headerHeight;
     });
-    $(divs[scrolledPast.length].section).addClass("with-fixed-header")
+    var selected = $(divs[scrolledPast.length].section)
+    $(".section").not(selected).removeClass("with-fixed-header")
+    selected.addClass("with-fixed-header")
   });
 
 });
