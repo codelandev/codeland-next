@@ -46,6 +46,11 @@ legend, input[type="submit"], label, strong {
   color: #222222;
 }
 
+[data-active="technology"] .section-anchor:hover,
+[data-active="technology"] .section-anchor.active {
+  color: #2D7A7E;
+}
+
 [data-active="projects"] .section-anchor:hover,
 [data-active="projects"] .section-anchor.active {
   color: #F3D430;
@@ -111,12 +116,12 @@ legend, input[type="submit"], label, strong {
   max-height: 550px;
 }
 
-#who-we-are {
-  background-color: #1A1A1A;
-}
-
 #home, #who-we-are {
   color: #F3D430;
+}
+
+#who-we-are {
+  background-color: #1A1A1A;
 }
 
 #projects,
@@ -124,13 +129,16 @@ legend, input[type="submit"], label, strong {
   background-color: #F3D430;
 }
 
-#projects, .project, .project:hover {
-  color: #222222;
+#projects,
+.project,
+.project:hover {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMklEQVQYV2NkYGD4zwABjFAaKwWSJFohPoPgcnitQzaBYoUY7sZlItEKMTxIsRsxTAQAToUECxUArzQAAAAASUVORK5CYII=);
+  color: #222222;
 }
 
 #technology {
-  background-color: #6A92AA;
+  background-color: #2D7A7E;
+  color: #F3D430;
 }
 
 #contact {
