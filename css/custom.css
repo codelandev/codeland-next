@@ -5,7 +5,7 @@ body {
 
 h1, h2, h3, h4, h5, h6,
 legend, input[type="submit"], label, strong {
-  letter-spacing: 0.25rem;
+  letter-spacing: 1.1rem;
 }
 
 .logo, .manifesto {
@@ -30,6 +30,10 @@ legend, input[type="submit"], label, strong {
 
 .section-anchor {
   color: #F3D430;
+  font-weight: 600;
+  padding: 5px 10px;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 .section-anchor:hover,
@@ -38,11 +42,14 @@ legend, input[type="submit"], label, strong {
   color: #222222;
 }
 
-.section-anchor {
-  padding: 5px 10px;
-  text-decoration: none;
-  text-transform: uppercase;
-  font-weight: 600;
+[data-active="projects"] .section-anchor {
+  color: #222222;
+}
+
+[data-active="projects"] .section-anchor:hover,
+[data-active="projects"] .section-anchor.active {
+  color: #F3D430;
+  background-color: #222222;
 }
 
 .section {
@@ -59,6 +66,7 @@ legend, input[type="submit"], label, strong {
   padding: 65px 0;
   text-align: center;
   text-transform: uppercase;
+  font-weight: bolder;
 }
 
 .header-bg {
@@ -87,8 +95,16 @@ legend, input[type="submit"], label, strong {
   background-color: #222222;
 }
 
-.home-container {
+.content {
   margin-top: 150px;
+}
+
+#projects .content {
+  margin-top: 50px;
+}
+
+.section-title {
+  font-weight: 800;
 }
 
 #video {
@@ -103,12 +119,14 @@ legend, input[type="submit"], label, strong {
   color: #F3D430;
 }
 
-#projects {
-  background-color: #E0759D;
+#projects,
+.section {
+  background-color: #F3D430;
 }
 
 #projects, .project, .project:hover {
   color: #222222;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMklEQVQYV2NkYGD4zwABjFAaKwWSJFohPoPgcnitQzaBYoUY7sZlItEKMTxIsRsxTAQAToUECxUArzQAAAAASUVORK5CYII=);
 }
 
 #technology {
@@ -132,7 +150,6 @@ legend, input[type="submit"], label, strong {
 
 .slogan {
   font-size: 6.2rem;
-  letter-spacing: 1.1rem;
   line-height: 1.2;
   text-transform: uppercase;
   position: relative;

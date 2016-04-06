@@ -16,10 +16,12 @@ $(document).ready(function() {
       return elem.bottom < $(window).scrollTop() + headerHeight;
     });
     var selected = $(divs[scrolledPast.length].section)
-    var selectedAnchor = $(".section-anchor[href='#" + selected.attr("id") + "']")
+    var name = selected.attr("id")
+    var selectedAnchor = $(".section-anchor[href='#" + name + "']")
     $(".section-anchor").not(selectedAnchor).removeClass("active")
     $(".section").not(selected).removeClass("with-fixed-header")
 
+    selectedAnchor.parents(".manifesto").attr("data-active", name)
     selectedAnchor.addClass("active")
     selected.addClass("with-fixed-header")
   });
