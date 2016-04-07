@@ -371,6 +371,7 @@ input[type="password"],
 textarea,
 select {
   border-radius: 0;
+  color: #1A1A1A;
 }
 
 input[type="email"]:focus,
@@ -383,6 +384,19 @@ input[type="password"]:focus,
 textarea:focus,
 select:focus {
   border-color: #F3D430;
+}
+
+.button.button-primary:hover,
+button.button-primary:hover,
+input[type="submit"].button-primary:hover,
+input[type="reset"].button-primary:hover,
+input[type="button"].button-primary:hover,
+.button.button-primary:focus,
+button.button-primary:focus,
+input[type="submit"].button-primary:focus,
+input[type="reset"].button-primary:focus,
+input[type="button"].button-primary:focus {
+  background-color: #222;
 }
 
 /* Responsive video */
