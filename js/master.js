@@ -21,8 +21,7 @@ $(document).ready(function() {
     $(".section-anchor").not(selectedAnchor).removeClass("active")
     $(".section").not(selected).removeClass("with-fixed-header")
 
-    selectedAnchor.parents(".manifesto").attr("data-active", name)
-    $(".logo").attr("data-active", name)
+    $("body").attr("data-active", name)
     selectedAnchor.addClass("active")
     selected.addClass("with-fixed-header")
   });
