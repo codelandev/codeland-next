@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  var headerHeight = $(".section-header").outerHeight()
+  var headerHeight = $(".section-header").outerHeight() - 50;
 
   var divs = $(".section").map(function(_index, section) {
     var wrappedSection = $(section)
@@ -22,6 +22,7 @@ $(document).ready(function() {
     $(".section").not(selected).removeClass("with-fixed-header")
 
     selectedAnchor.parents(".manifesto").attr("data-active", name)
+    $(".logo").attr("data-active", name)
     selectedAnchor.addClass("active")
     selected.addClass("with-fixed-header")
   });

@@ -55,6 +55,15 @@ label {
   left: 20px;
   top: 20px;
   width: 60px;
+  height: 67px;
+}
+
+.logo-path {
+  fill: #FCDA00;
+}
+
+[data-active="projects"] .logo-path {
+  fill: #222;
 }
 
 .manifesto {
