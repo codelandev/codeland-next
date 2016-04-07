@@ -145,28 +145,47 @@
 
     <section class="section" id="contact">
       <header class="section-header">
-        <object type="image/svg+xml" data="imgs/header-bg.svg" class="header-bg"></object>
+        <object class="header-bg">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="-361 -166.5 1920 258.859">
+            <defs>
+              <style>
+                #contact .a {
+                  fill: #222;
+                }
+              </style>
+            </defs>
+            <path class="a" d="M.5,32.5h1920V239.451L674.023,291.359.5,229.613Z" transform="translate(-361.5 -199)" />
+          </svg>
+        </object>
         <div class="container">
           <h2 class="section-title">Com a sua ajuda.</h2>
         </div>
       </header>
       <div class="container content">
-        <form>
-          <div class="row">
-            <div class="offset-by-three six columns">
-              <label for="exampleEmailInput">Seu name</label>
-              <input class="u-full-width" type="text" placeholder="Andressa Machado" id="">
+        <div class="row">
+           <div class="offset-by-six six columns">
+             <address class="contact-address">
+               <span class="address contact-address-row">Rua Felipe Neri, 138 - sala 201, Porto Alegre - RS</span>
+               <a href="mailto:contato@codeland.com.br?subject=Contato site" class="contact-address-row">contato@codeland.com.br</a>
+               <a href="tel:555137799710" class="contact-address-row">+55 51 3779-9710</a>
+             </address>
+             <form>
+               <fieldset>
+                 <strong class="legend">Como podemos te ajudar?</strong>
+                 <label for="name">Nome</label>
+                 <input class="u-full-width" type="text" placeholder="Andressa Machado" id="name">
 
-              <label for="exampleEmailInput">Seu email</label>
-              <input class="u-full-width" type="email" placeholder="andressa@example.com" id="">
+                 <label for="email">E-mail</label>
+                 <input class="u-full-width" type="email" placeholder="andressa@example.com" id="email">
 
-              <label for="exampleMessage">O que você procura?</label>
-              <textarea class="u-full-width" placeholder="Olá!..." id="exampleMessage"></textarea>
+                 <label for="message">Mensagem</label>
+                 <textarea class="u-full-width" placeholder="Olá!..." id="message"></textarea>
 
-              <input class="button-primary u-full-width" type="submit" value="Enviar mensagem">
-            </div>
-          </div>
-        </form>
+                 <input class="button-primary u-full-width" type="submit" value="Enviar mensagem">
+               </fieldset>
+             </form>
+           </div>
+        </div>
       </div>
     </section>
   </div>

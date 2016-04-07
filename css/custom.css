@@ -4,8 +4,46 @@ body {
 }
 
 h1, h2, h3, h4, h5, h6,
-legend, input[type="submit"], label, strong {
+input[type="submit"], strong {
   letter-spacing: 1.1rem;
+}
+
+fieldset {
+  border-top: 1px solid #F3D430;
+  padding-top: 40px;
+}
+
+.legend {
+  color: #fff;
+  display: block;
+  font-weight: 600;
+  letter-spacing: .5rem;
+  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+#contact label {
+  color: #F3D430;
+}
+
+.contact-address {
+  margin-bottom: 30px;
+}
+
+.contact-address-row {
+  color: #fff;
+  display: block;
+  font-size: 2rem;
+  padding: 10px 0 10px 25px;
+  text-decoration: none;
+}
+
+label {
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: .5rem;
+  text-transform: uppercase;
 }
 
 .logo, .manifesto {
@@ -39,11 +77,11 @@ legend, input[type="submit"], label, strong {
 .section-anchor:hover,
 .section-anchor.active {
   background-color: #F3D430;
-  color: #222222;
+  color: #222;
 }
 
 [data-active="projects"] .section-anchor {
-  color: #222222;
+  color: #222;
 }
 
 [data-active="technology"] .section-anchor:hover,
@@ -54,12 +92,13 @@ legend, input[type="submit"], label, strong {
 [data-active="projects"] .section-anchor:hover,
 [data-active="projects"] .section-anchor.active {
   color: #F3D430;
-  background-color: #222222;
+  background-color: #222;
 }
 
 .section {
   min-height: 600px;
   padding-top: 152px;
+  position: relative;
 }
 
 .projects:not(:last-child) {
@@ -97,7 +136,7 @@ legend, input[type="submit"], label, strong {
 
 #home {
   text-align: right;
-  background-color: #222222;
+  background-color: #222;
 }
 
 .content {
@@ -105,8 +144,25 @@ legend, input[type="submit"], label, strong {
 }
 
 #projects .content,
-#technology .content {
+#technology .content,
+#contact .content {
   margin-top: 50px;
+}
+
+#contact {
+  background-image: url("https://api.mapbox.com/v4/mapbox.streets/pin-s-heart+285A98(-51.1947963,-30.023142)/-51.188,-30.027,15/600x600@2x.png?access_token=pk.eyJ1IjoiaXJpbyIsImEiOiJjaW1wN2s5aWgwMG93dW1tMWtnazRyc3oyIn0.ezYdL4grZSSTenioNqaJjA");
+  background-size: cover;
+}
+
+#contact:before {
+  background-color: #222;
+  content: '';
+  height: 100%;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 60%;
+  opacity: .9;
 }
 
 .section-title {
@@ -117,7 +173,9 @@ legend, input[type="submit"], label, strong {
   max-height: 550px;
 }
 
-#home, #who-we-are {
+#home,
+#who-we-are,
+#contact {
   color: #F3D430;
 }
 
@@ -134,7 +192,7 @@ legend, input[type="submit"], label, strong {
 .project,
 .project:hover {
   background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAMklEQVQYV2NkYGD4zwABjFAaKwWSJFohPoPgcnitQzaBYoUY7sZlItEKMTxIsRsxTAQAToUECxUArzQAAAAASUVORK5CYII=);
-  color: #222222;
+  color: #222;
 }
 
 #technology {
@@ -152,7 +210,7 @@ legend, input[type="submit"], label, strong {
 
 .technology-anchor {
   background-color: #3C9AA0;
-  color: #222222;
+  color: #222;
   display: inline-block;
   font-size: 2.2rem;
   font-weight: 800;
@@ -165,7 +223,7 @@ legend, input[type="submit"], label, strong {
 
 .technology-anchor:hover {
   padding-right: 80px;
-  color: #222222;
+  color: #222;
 }
 
 .technology-anchor:hover:after {
@@ -177,10 +235,6 @@ legend, input[type="submit"], label, strong {
   font-weight: 600;
   color: #F3D430;
   z-index: 1;
-}
-
-#contact {
-  background-color: #F5D69D;
 }
 
 .main-title {
@@ -253,14 +307,48 @@ legend, input[type="submit"], label, strong {
 
 /* Overriding Skeleton */
 
-input[type="submit"].button-primary {
-  background-color: #222;
-  border-color: #222;
-  color: #fff;
+input.button-primary[type="submit"] {
+  background-color: #F3D430;
+  border: none;
+  color: #1A1A1A;
+  font-weight: 600;
+  letter-spacing: .5rem;
 }
 
 h2 {
   margin: 0;
+}
+
+a:hover {
+  color: #F3D430;
+}
+
+address {
+  font-style: normal;
+}
+
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="text"],
+input[type="tel"],
+input[type="url"],
+input[type="password"],
+textarea,
+select {
+  border-radius: 0;
+}
+
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="search"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+textarea:focus,
+select:focus {
+  border-color: #F3D430;
 }
 
 /* Responsive video */
