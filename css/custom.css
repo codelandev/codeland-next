@@ -32,10 +32,14 @@ fieldset {
 }
 
 .contact-address-row {
+  position: relative;
+}
+
+.contact-address-row-content {
   color: #fff;
   display: block;
   font-size: 2rem;
-  padding: 10px 0 10px 25px;
+  padding: 10px 0 10px 35px;
   text-decoration: none;
 }
 
@@ -312,6 +316,27 @@ label {
 
 .project:hover .project-name {
   display: none;
+}
+
+.contact-icon {
+  position: absolute;
+}
+
+.contact-icon.fa-map-marker {
+  font-size: 2.3rem;
+  left: 3px;
+  top: 16px;
+}
+
+.contact-icon.fa-envelope {
+  font-size: 1.8rem;
+  top: 19px;
+}
+
+.contact-icon.fa-phone {
+  font-size: 2.1rem;
+  left: 2px;
+  top: 18px;
 }
 
 /* Overriding Skeleton */
