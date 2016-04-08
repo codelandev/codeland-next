@@ -77,6 +77,7 @@ label {
   right: 15px;
   text-align: right;
   top: 20px;
+  z-index: 3;
 }
 
 .section-anchor {
@@ -112,6 +113,8 @@ label {
   min-height: 600px;
   padding-top: 152px;
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
 .projects:not(:last-child) {
@@ -150,10 +153,6 @@ label {
 #home {
   text-align: right;
   background-color: #222;
-}
-
-.content {
-  margin-top: 150px;
 }
 
 #projects .content,
