@@ -9,15 +9,15 @@
   * Malha http://www.malha.cc/
   * Catarse https://www.catarse.me/
   * Box1824 http://www.box1824.com.br/
-[ ] Tirar vídeo e colocar textinho
-[ ] Escrever o textinho para o lugar do vídeo
 [ ] Adicionar link para Facebook e Twitter
 [ ] Definir foto da seção "Tecnologia"
 [ ] Definir imagem de cada projeto
 [ ] Fazer form de contato funcionar
-[ ] Escrever micro manifesto
 [ ] Replicar metatags do site atual
-[ ] Redefinir slogan (primeira seção do site)
+[X] Escrever micro manifesto
+[X] Escrever o textinho para o lugar do vídeo
+[X] Redefinir slogan (primeira seção do site)
+[X] Tirar vídeo e colocar textinho
 
 [ ] Versão em Inglês
 [ ] Adicionar favicon
