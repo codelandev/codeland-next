@@ -8,6 +8,10 @@ input[type="submit"], strong {
   letter-spacing: 1.1rem;
 }
 
+h5{
+  letter-spacing: 0.2rem;
+}
+
 fieldset {
   border-top: 1px solid #F3D430;
   padding-top: 40px;
