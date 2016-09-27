@@ -1,16 +1,17 @@
-$(document).ready(function() {
+var calculateHeaderChanges = function () {
   var sectionMinHeight = $(window.top).outerHeight();
   $(".section").css("min-height", sectionMinHeight);
   var headerHeight = $(".section-header").height();
 
   var divs = $(".section").map(function(_index, section) {
     var wrappedSection = $(section);
-    var bottom = wrappedSection.offset().top + wrappedSection.outerHeight() - 33;
-    // var bottom = wrappedSection.offset().top + wrappedSection.outerHeight() - 62;
+    var bottom = wrappedSection.offset().top +
+      wrappedSection.outerHeight() -
+      wrappedSection.outerWidth() * .034;
     return {
       bottom: bottom,
       section: wrappedSection,
-     };
+    };
   });
 
   $(window).scroll(function() {
@@ -27,5 +28,16 @@ $(document).ready(function() {
     selectedAnchor.addClass("active");
     selected.addClass("with-fixed-header");
   });
+}
 
-});
+if ($(window.top).outerWidth() >= 1366) {
+
+  $(document).ready(function() {
+
+    calculateHeaderChanges();
+    window.onresize = function() {
+      calculateHeaderChanges();
+    };
+
+  });
+};
