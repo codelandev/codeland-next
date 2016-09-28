@@ -3,12 +3,18 @@ body {
   font-family: Lato, Helvetica, Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6,
-input[type="submit"], strong {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input[type="submit"],
+strong {
   letter-spacing: 1.1rem;
 }
 
-h5{
+h5 {
   letter-spacing: 0.2rem;
 }
 
@@ -55,7 +61,8 @@ label {
   text-transform: uppercase;
 }
 
-.logo, .manifesto {
+.logo,
+.manifesto {
   position: fixed;
   z-index: 3;
 }
@@ -116,7 +123,7 @@ label {
 
 .section {
   min-height: 600px;
-  padding-top: 152px;
+  padding: 152px 0;
   position: relative;
   display: flex;
   align-items: center;
@@ -136,10 +143,11 @@ label {
 
 .section-header {
   display: none;
+  font-weight: bolder;
+  opacity: .9;
   padding: 47px 0;
   text-align: center;
   text-transform: uppercase;
-  font-weight: bolder;
 }
 
 .header-bg {
@@ -166,12 +174,6 @@ label {
 #home {
   text-align: right;
   background-color: #222;
-}
-
-#projects .content,
-#technology .content,
-#contact .content {
-  margin-top: 50px;
 }
 
 #contact {
@@ -210,10 +212,6 @@ label {
 
 #home .section-header {
   height: 52px;
-}
-
-.widescreen #home .section-header {
-  display: none;
 }
 
 #home .section-header,
@@ -339,13 +337,13 @@ label {
 }
 
 .project:hover:before {
+  color: #F3D430;
   content: '+';
   font-size: 10rem;
+  font-weight: bold;
   left: 117px;
   position: absolute;
   top: 30px;
-  font-weight: bold;
-  color: #F3D430;
 }
 
 .project:hover .project-name {
@@ -471,10 +469,19 @@ input[type="button"].button-primary:focus {
   padding-top: 0;
 }
 
-.js-video embed, .js-video iframe, .js-video object, .js-video video {
+.js-video embed,
+.js-video iframe,
+.js-video object,
+.js-video video {
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+@media screen and (min-width: 1420px) {
+  #home .section-header {
+    display: none;
+  }
 }

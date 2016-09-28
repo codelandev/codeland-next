@@ -14,12 +14,6 @@ var calculateHeaderChanges = function () {
     selected.addClass("with-fixed-header");
   }
 
-  if ($(window.top).outerWidth() >= 1420) {
-    $("body").addClass("widescreen");
-  } else {
-    $("body").removeClass("widescreen");
-  }
-
   var sectionMinHeight = $(window.top).outerHeight();
   $(".section").css("min-height", sectionMinHeight);
   var headerHeight = $(".section-header").height();
