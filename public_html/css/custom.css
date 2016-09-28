@@ -13,12 +13,13 @@ h5{
 }
 
 fieldset {
-  border-top: 1px solid #F3D430;
-  padding-top: 40px;
+  border-bottom: 1px solid #F3D430;
+  padding-bottom: 40px;
 }
 
 .legend {
   color: #fff;
+  font-size: 3rem;
   display: block;
   font-weight: 600;
   letter-spacing: .5rem;
@@ -363,6 +364,24 @@ label {
   top: 18px;
 }
 
+.contact-icon.fa-facebook-official{
+  font-size: 2.1rem;
+  left: 2px;
+  top: 18px;
+}
+
+.contact-icon.fa-twitter-square{
+  font-size: 2.1rem;
+  left: 2px;
+  top: 18px;
+}
+
+.contact-icon.fa-linkedin-square{
+  font-size: 2.1rem;
+  left: 2px;
+  top: 18px;
+}
+
 /* Overriding Skeleton */
 
 input.button-primary[type="submit"] {
@@ -370,6 +389,7 @@ input.button-primary[type="submit"] {
   border: none;
   color: #1A1A1A;
   font-weight: 600;
+  font-size: 1.1em;
   letter-spacing: .5rem;
 }
 
