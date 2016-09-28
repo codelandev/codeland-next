@@ -14,6 +14,12 @@ var calculateHeaderChanges = function () {
     selected.addClass("with-fixed-header");
   }
 
+  if ($(window.top).outerWidth() >= 1420) {
+    $("body").addClass("widescreen");
+  } else {
+    $("body").removeClass("widescreen");
+  }
+
   var sectionMinHeight = $(window.top).outerHeight();
   $(".section").css("min-height", sectionMinHeight);
   var headerHeight = $(".section-header").height();
@@ -21,7 +27,7 @@ var calculateHeaderChanges = function () {
   var divs = $(".section").map(function(_index, section) {
     var wrappedSection = $(section);
     var bottom = wrappedSection.offset().top +
-      wrappedSection.outerHeight() - 42;
+      wrappedSection.outerHeight() - 95;
     return {
       bottom: bottom,
       section: wrappedSection,
@@ -34,14 +40,11 @@ var calculateHeaderChanges = function () {
   });
 }
 
-if ($(window.top).outerWidth() >= 1366) {
+$(document).ready(function() {
 
-  $(document).ready(function() {
-
+  calculateHeaderChanges();
+  window.onresize = function() {
     calculateHeaderChanges();
-    window.onresize = function() {
-      calculateHeaderChanges();
-    };
+  };
 
-  });
-};
+});

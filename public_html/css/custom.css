@@ -208,6 +208,15 @@ label {
   background-color: #1A1A1A;
 }
 
+#home .section-header {
+  height: 52px;
+}
+
+.widescreen #home .section-header {
+  display: none;
+}
+
+#home .section-header,
 #who-we-are .section-header,
 #contact .section-header {
   background-color: #222;
