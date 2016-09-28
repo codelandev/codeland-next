@@ -60,10 +60,10 @@ label {
 }
 
 .logo {
-  left: 20px;
-  top: 20px;
-  width: 60px;
   height: 67px;
+  left: 39px;
+  top: 37px;
+  width: 60px;
 }
 
 .logo-path {
@@ -159,7 +159,7 @@ label {
 
 .section-header {
   display: none;
-  padding: 65px 0;
+  padding: 47px 0;
   text-align: center;
   text-transform: uppercase;
   font-weight: bolder;
@@ -231,6 +231,11 @@ label {
   background-color: #1A1A1A;
 }
 
+#who-we-are .section-header,
+#contact .section-header {
+  background-color: #222;
+}
+
 #projects,
 .section {
   background-color: #F3D430;
@@ -243,9 +248,17 @@ label {
   color: #222;
 }
 
+#projects .section-header {
+  background-color: #F3D430;
+}
+
 #technology {
   background-color: #2D7A7E;
   color: #F3D430;
+}
+
+#technology .section-header {
+  background-color: #3C9AA0;
 }
 
 .technology-anchors {

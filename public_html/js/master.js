@@ -1,20 +1,5 @@
 var calculateHeaderChanges = function () {
-  var sectionMinHeight = $(window.top).outerHeight();
-  $(".section").css("min-height", sectionMinHeight);
-  var headerHeight = $(".section-header").height();
-
-  var divs = $(".section").map(function(_index, section) {
-    var wrappedSection = $(section);
-    var bottom = wrappedSection.offset().top +
-      wrappedSection.outerHeight() -
-      wrappedSection.outerWidth() * .034;
-    return {
-      bottom: bottom,
-      section: wrappedSection,
-    };
-  });
-
-  $(window).scroll(function() {
+  var showSelectedHeader = function () {
     var scrolledPast = divs.filter(function(_index, elem) {
       return elem.bottom < $(window).scrollTop() + headerHeight;
     });
@@ -27,6 +12,25 @@ var calculateHeaderChanges = function () {
     $("body").attr("data-active", name);
     selectedAnchor.addClass("active");
     selected.addClass("with-fixed-header");
+  }
+
+  var sectionMinHeight = $(window.top).outerHeight();
+  $(".section").css("min-height", sectionMinHeight);
+  var headerHeight = $(".section-header").height();
+
+  var divs = $(".section").map(function(_index, section) {
+    var wrappedSection = $(section);
+    var bottom = wrappedSection.offset().top +
+      wrappedSection.outerHeight() - 42;
+    return {
+      bottom: bottom,
+      section: wrappedSection,
+    };
+  });
+
+  showSelectedHeader();
+  $(window).scroll(function() {
+    showSelectedHeader();
   });
 }
 
