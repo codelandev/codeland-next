@@ -130,10 +130,6 @@ label {
   align-items: center;
 }
 
-.projects:not(:last-child) {
-  margin-bottom: 4px;
-}
-
 .companies {
   margin: 100px 0;
 }
@@ -302,17 +298,11 @@ label {
   right: -10px;
 }
 
-.projects .columns:not(:first-child) {
-  margin-left: .5%;
-}
-
-.projects .columns {
-  width: 33%;
-}
-
 .project {
+  background-size: cover;
   display: block;
   height: 200px;
+  margin-bottom: 30px;
   position: relative;
   width: 100%;
 }
@@ -321,17 +311,19 @@ label {
   align-items: center;
   background-color: #F3D430;
   bottom: 10px;
+  box-sizing: border-box;
   display: flex;
   font-size: 1.8rem;
-  height: 55px;
   left: 10px;
   letter-spacing: normal;
   line-height: 1.3;
   padding: 10px 20px;
   position: absolute;
+  right: 10px;
   text-transform: uppercase;
-  width: 180px;
+  word-break: break-all;
 }
+
 
 .project:hover {
   text-decoration: none;
@@ -347,6 +339,29 @@ label {
   top: 30px;
 }
 
+#serenata-de-amor {
+  background-image: url(../imgs/serenata-de-amor.png);
+}
+
+#tribo-viva {
+  background-image: url(../imgs/tribo-viva.png);
+}
+
+#juntos-com-vc {
+  background-image: url(../imgs/juntos-com-vc.png);
+}
+
+#aura {
+  background-image: url(../imgs/aura.png);
+}
+
+#brasilia-marketing-school {
+  background-image: url(../imgs/brasilia-marketing-school.png);
+}
+
+#yubb {
+  background-image: url(../imgs/yubb.png);
+}
 .project:hover .project-name {
   display: none;
 }
@@ -481,6 +496,10 @@ input[type="button"].button-primary:focus {
   width: 100%;
 }
 
+.projects-row:not(:last-child) {
+  margin-bottom: 40px;
+}
+
 @media screen and (min-width: 1420px) {
   #home .section-header {
     display: none;
@@ -490,5 +509,29 @@ input[type="button"].button-primary:focus {
 @media screen and (min-width: 1310px) {
   .manifesto {
     display: block;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects .columns:not(:first-child) {
+    margin-left: .5%;
+  }
+
+  .projects .columns {
+    width: 33%;
+  }
+
+  .projects-row:not(:last-child) {
+    margin-bottom: 5px;
+  }
+
+  .project-name {
+    right: 51px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .project {
+    margin-bottom: 0;
   }
 }
