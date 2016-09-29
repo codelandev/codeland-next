@@ -11,10 +11,11 @@ h5,
 h6,
 input[type="submit"],
 strong {
-  letter-spacing: 1.1rem;
+  letter-spacing: .6rem;
 }
 
-h5 {
+p {
+  font-size: 2.4rem;
   letter-spacing: 0.2rem;
 }
 
@@ -29,7 +30,6 @@ fieldset {
   display: block;
   font-weight: 600;
   letter-spacing: .5rem;
-  margin-bottom: 20px;
   margin-bottom: 30px;
   text-transform: uppercase;
 }
@@ -68,10 +68,15 @@ label {
 }
 
 .logo {
+  display: none;
   height: 67px;
   left: 39px;
   top: 37px;
   width: 60px;
+}
+
+[data-active="home"] .logo {
+  display: block;
 }
 
 .logo-path {
@@ -89,14 +94,18 @@ label {
   list-style-type: none;
   right: 15px;
   text-align: right;
-  top: 20px;
+  top: 17px;
   z-index: 3;
+}
+
+.manifesto-item {
+  margin-bottom: 1.2rem;
 }
 
 .section-anchor {
   color: #F3D430;
   font-weight: 600;
-  padding: 5px 10px;
+  padding: 4px 5px;
   text-decoration: none;
   text-transform: uppercase;
 }
@@ -124,7 +133,7 @@ label {
 
 .section {
   min-height: 600px;
-  padding: 152px 0;
+  padding: 215px 0 100px;
   position: relative;
   display: flex;
   align-items: center;
@@ -132,10 +141,6 @@ label {
 
 .companies {
   margin: 100px 0;
-}
-
-.companies-row:last-child {
-  margin-top: 40px;
 }
 
 .company {
@@ -154,7 +159,7 @@ label {
   display: none;
   font-weight: bolder;
   opacity: .9;
-  padding: 47px 0;
+  padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
 }
@@ -188,6 +193,7 @@ label {
 #contact {
   background-image: url("https://api.mapbox.com/v4/mapbox.streets/pin-s-heart+285A98(-51.1947963,-30.023142)/-51.188,-30.027,15/600x600@2x.png?access_token=pk.eyJ1IjoiaXJpbyIsImEiOiJjaW1wN2s5aWgwMG93dW1tMWtnazRyc3oyIn0.ezYdL4grZSSTenioNqaJjA");
   background-size: cover;
+  padding-bottom: 0;
 }
 
 #contact:before {
@@ -197,11 +203,12 @@ label {
   position: absolute;
   right: 0;
   top: 0;
-  width: 60%;
+  width: 100%;
   opacity: .9;
 }
 
 .section-title {
+  font-size: 2.4rem;
   font-weight: 800;
 }
 
@@ -220,7 +227,7 @@ label {
 }
 
 #home .section-header {
-  height: 52px;
+  height: 102px;
 }
 
 #home .section-header,
@@ -299,7 +306,7 @@ label {
 }
 
 .slogan {
-  font-size: 6.2rem;
+  font-size: 2.2rem;
   line-height: 1.2;
   text-transform: uppercase;
   position: relative;
@@ -475,43 +482,40 @@ input[type="button"].button-primary:focus {
   background-color: #222;
 }
 
-/* Responsive video */
-
-.js-video {
-  height: 0;
-  margin-bottom: 10px;
-  overflow: hidden;
-  padding-bottom: 67.5%;
-  padding-top: 25px;
-  position: relative;
-}
-
-.js-video.widescreen {
-  padding-bottom: 56.34%;
-}
-
-.js-video.vimeo {
-  padding-top: 0;
-}
-
-.js-video embed,
-.js-video iframe,
-.js-video object,
-.js-video video {
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
 @media screen and (min-width: 550px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  input[type="submit"],
+  strong {
+    letter-spacing: 1.1rem;
+  }
+
+  #home .section-header {
+    height: 52px;
+  }
+
+  .logo {
+    display: block;
+  }
+
+  .section-header {
+    padding: 47px 0;
+  }
+
   .projects-row:not(:last-child) {
     margin-bottom: 40px;
   }
 
   .project {
     margin-bottom: 0;
+  }
+
+  .companies-row:last-child {
+    margin-top: 40px;
   }
 
   .technology-anchors {
@@ -529,6 +533,14 @@ input[type="button"].button-primary:focus {
 }
 
 @media screen and (min-width: 1200px) {
+  .slogan {
+    font-size: 6.2rem;
+  }
+
+  .section-title {
+    font-size: 4.2rem;
+  }
+
   .projects .columns:not(:first-child) {
     margin-left: .5%;
   }
@@ -543,6 +555,17 @@ input[type="button"].button-primary:focus {
 
   .project-name {
     right: 51px;
+  }
+
+  #contact:before {
+    width: 60%;
+  }
+
+  .contact-content {
+    box-sizing: border-box;
+    float: left;
+    margin-left: 52%;
+    width: 48%;
   }
 }
 
