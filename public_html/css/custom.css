@@ -256,10 +256,6 @@ label {
 
 .technology-anchors {
   list-style: none;
-  position: absolute;
-  right: 0;
-  text-align: right;
-  top: 0;
 }
 
 .technology-anchor {
@@ -268,7 +264,7 @@ label {
   display: inline-block;
   font-size: 2.2rem;
   font-weight: 800;
-  margin-bottom: 1px;
+  margin-bottom: 5px;
   padding: 10px 50px;
   text-decoration: none;
   text-transform: uppercase;
@@ -517,6 +513,19 @@ input[type="button"].button-primary:focus {
   .project {
     margin-bottom: 0;
   }
+
+  .technology-anchors {
+    position: absolute;
+    right: 0;
+    text-align: right;
+    top: 0;
+  }
+
+  .technology-anchor.columns {
+    float: none;
+    margin-bottom: 1px;
+    width: auto;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -546,5 +555,9 @@ input[type="button"].button-primary:focus {
 @media screen and (min-width: 1420px) {
   #home .section-header {
     display: none;
+  }
+
+  .technology-picture {
+    width: 82.6666666667%;
   }
 }
