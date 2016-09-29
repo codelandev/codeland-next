@@ -335,9 +335,9 @@ label {
   content: '+';
   font-size: 10rem;
   font-weight: bold;
-  left: 117px;
+  left: calc(50% - 29px);
   position: absolute;
-  top: 30px;
+  top: 14px;
 }
 
 #serenata-de-amor {
