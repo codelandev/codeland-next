@@ -497,19 +497,13 @@ input[type="button"].button-primary:focus {
   width: 100%;
 }
 
-.projects-row:not(:last-child) {
-  margin-bottom: 40px;
-}
-
-@media screen and (min-width: 1420px) {
-  #home .section-header {
-    display: none;
+@media screen and (min-width: 550px) {
+  .projects-row:not(:last-child) {
+    margin-bottom: 40px;
   }
-}
 
-@media screen and (min-width: 1310px) {
-  .manifesto {
-    display: block;
+  .project {
+    margin-bottom: 0;
   }
 }
 
@@ -531,8 +525,14 @@ input[type="button"].button-primary:focus {
   }
 }
 
-@media screen and (min-width: 550px) {
-  .project {
-    margin-bottom: 0;
+@media screen and (min-width: 1310px) {
+  .manifesto {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 1420px) {
+  #home .section-header {
+    display: none;
   }
 }
