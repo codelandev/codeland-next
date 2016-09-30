@@ -186,8 +186,9 @@ label {
 }
 
 #home {
-  text-align: right;
   background-color: #222;
+  padding: 50px 0;
+  text-align: right;
 }
 
 #contact {
