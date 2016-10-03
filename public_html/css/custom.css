@@ -158,7 +158,6 @@ label {
 .section-header {
   display: none;
   font-weight: bolder;
-  opacity: .9;
   padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
