@@ -116,6 +116,11 @@ label {
   color: #222;
 }
 
+[data-active="home"] .section-anchor {
+  background: #222;
+  color: #F3D430;
+}
+
 [data-active="projects"] .section-anchor {
   color: #222;
 }
@@ -156,7 +161,11 @@ label {
 }
 
 .section-header {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-100%);
+  transition: all .3s;
+  position: fixed;
   font-weight: bolder;
   padding: 20px 0;
   text-align: center;
@@ -171,12 +180,18 @@ label {
   display: none;
 }
 
+.section-hero {
+  margin-right: 50px;
+}
+
 .with-fixed-header .header-bg {
   display: block;
 }
 
 .with-fixed-header .section-header {
-  display: block;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
   left: 0;
   position: fixed;
   top: 0;
@@ -583,4 +598,9 @@ input[type="button"].button-primary:focus {
   .technology-picture {
     width: 82.6666666667%;
   }
+}
+
+
+.particles-js-canvas-el {
+  position: absolute;
 }
