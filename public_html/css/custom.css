@@ -75,6 +75,10 @@ label {
   width: 60px;
 }
 
+.section-hero {
+  margin-right: 100px;
+}
+
 [data-active="home"] .logo {
   display: block;
 }
@@ -85,6 +89,11 @@ label {
 
 [data-active="projects"] .logo-path {
   fill: #222;
+}
+
+
+[data-active="projects"] .section-anchor {
+  color: #222;
 }
 
 .manifesto {
@@ -108,6 +117,7 @@ label {
   padding: 4px 5px;
   text-decoration: none;
   text-transform: uppercase;
+  cursor: pointer;
 }
 
 .section-anchor:hover,
@@ -116,29 +126,9 @@ label {
   color: #222;
 }
 
-[data-active="home"] .section-anchor {
-  background: #222;
-  color: #F3D430;
-}
-
-[data-active="projects"] .section-anchor {
-  color: #222;
-}
-
-[data-active="technology"] .section-anchor:hover,
-[data-active="technology"] .section-anchor.active {
-  color: #2D7A7E;
-}
-
-[data-active="projects"] .section-anchor:hover,
-[data-active="projects"] .section-anchor.active {
-  color: #F3D430;
-  background-color: #222;
-}
-
 .section {
-  min-height: 600px;
-  padding: 215px 0 100px;
+  min-height: 100vh;
+  padding: 100px 0 100px;
   position: relative;
   display: flex;
   align-items: center;
@@ -161,42 +151,25 @@ label {
 }
 
 .section-header {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(-100%);
-  transition: all .3s;
+  will-change: transform;
   position: fixed;
-  font-weight: bolder;
+  width: 100%;
+  top: 0;
+  left: 0;
   padding: 20px 0;
   text-align: center;
   text-transform: uppercase;
-}
-
-.header-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: none;
-}
-
-.section-hero {
-  margin-right: 50px;
-}
-
-.with-fixed-header .header-bg {
-  display: block;
-}
-
-.with-fixed-header .section-header {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  left: 0;
-  position: fixed;
-  top: 0;
-  width: 100%;
+  transform: translateY(-100%);
+  opacity: 0;
+  visibility: hidden;
   z-index: 2;
+  transition: all .3s;
+}
+
+.section-header.active {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 
 #home {
@@ -298,15 +271,24 @@ label {
   color: #222;
 }
 
-.technology-anchor:hover:after {
+.technology-anchor:after {
   content: '+';
   font-size: 5rem;
-  right: 37px;
   position: absolute;
+  right: 17px;
   top: -15px;
   font-weight: 600;
   color: #F3D430;
   z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+
+.technology-anchor:hover:after {
+  right: 37px;
+  opacity: 1;
+  visibility: visible;
 }
 
 .main-title {
@@ -534,10 +516,45 @@ input[type="button"].button-primary:focus {
   }
 
   .technology-anchors {
-    position: absolute;
     right: 0;
-    text-align: right;
     top: 0;
+    transform: translateX(100%);
+    position: absolute;
+    text-align: right;
+  }
+
+  [data-active="technology"] .technology-anchors {
+    transform: translateX(0);
+  }
+
+  .technology-anchor {
+    transform: translateX(100%);
+    will-change: transform, padding;
+  }
+
+  [data-active="technology"] .tech-big-data {
+    transform: translateX(0);
+    transition: transform .3s, padding .3s;
+  }
+
+  [data-active="technology"] .tech-articles {
+    transform: translateX(0);
+    transition: transform .4s, padding .3s;
+  }
+
+  [data-active="technology"] .tech-hack {
+    transform: translateX(0);
+    transition: transform .6s, padding .3s;
+  }
+
+  [data-active="technology"] .tech-open-source {
+    transform: translateX(0);
+    transition: transform .7s, padding .3s;
+  }
+
+  [data-active="technology"] .tech-rails-workshop {
+    transform: translateX(0);
+    transition: transform .8s, padding .3s
   }
 
   .technology-anchor.columns {
@@ -600,7 +617,10 @@ input[type="button"].button-primary:focus {
   }
 }
 
-
 .particles-js-canvas-el {
   position: absolute;
+}
+
+.ov-h {
+  overflow: hidden;
 }
