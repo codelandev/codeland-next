@@ -70,30 +70,40 @@
       <path class="logo-path" d="M143.9 200.348c-.77 0-1.528-.23-2.177-.673L35.995 127.51c-1.34-.916-1.966-2.573-1.562-4.146.402-1.574 1.746-2.727 3.36-2.885l145-14.253c1.376-.132 2.715.474 3.52 1.596.8 1.12.944 2.586.373 3.843l-39.27 86.417c-.473 1.038-1.378 1.814-2.476 2.12-.34.096-.69.145-1.04.145zm-94.775-73.225l93.16 63.587 34.603-76.145-127.763 12.558z"/>
     </svg>
     <ul class="manifesto">
-      <li class="manifesto-item"><a href="#who-we-are" class="section-anchor">Somos a CODELAND</a></li>
-      <li class="manifesto-item"><a href="#projects" class="section-anchor">Construímos produtos</a></li>
-      <li class="manifesto-item"><a href="#technology" class="section-anchor">Somando tecnologia</a></li>
-      <li class="manifesto-item"><a href="#contact" class="section-anchor">Com a sua ideia</a></li>
+      <li class="manifesto-item">
+        <a href="#who-we-are" class="section-anchor">Somos a CODELAND</a>
+      </li>
+      <li class="manifesto-item">
+        <a href="#projects" class="section-anchor">Construímos produtos</a>
+      </li>
+      <li class="manifesto-item">
+        <a href="#technology" class="section-anchor">Somando tecnologia</a>
+      </li>
+      <li class="manifesto-item">
+        <a href="#contact" class="section-anchor">Com a sua ideia</a>
+      </li>
     </ul>
 
     <section class="section with-fixed-header" id="home">
-      <header class="section-header"></header>
       <div class="container content">
-        <h1 class="main-title">
+        <div class="section-hero">
+          <h1 class="main-title">
           <object type="image/svg+xml" data="imgs/lettering.svg" class="three columns logo-lettering">
             CODELAND
           </object>
         </h1>
         <strong class="slogan">Contruímos produtos digitais para quem quer fazer diferente</strong>
+        </div>
       </div>
     </section>
 
-    <section class="section" id="who-we-are">
+    <section data-real-section class="section" id="who-we-are">
       <header class="section-header">
         <div class="container">
           <h2 class="section-title">Somos a CODELAND...</h2>
         </div>
       </header>
+
       <div class="container content" id="cc">
         <div class="offset-by-one ten columns">
           <p>Nosso trabalho é garantir que o melhor da tecnologia junto das melhores práticas de desenvolvimento de projetos estejam disponíveis para você, que quer fazer diferente. Acreditamos que software se trata de pessoas e de comunidades.</p>
@@ -103,7 +113,7 @@
       </div>
     </section>
 
-    <section class="section" id="projects">
+    <section data-real-section class="section" id="projects">
       <header class="section-header">
         <div class="container">
           <h2 class="section-title">Construímos produtos...</h2>
@@ -195,25 +205,25 @@
       </div>
     </section>
 
-    <section class="section" id="technology">
+    <section data-real-section class="section" id="technology">
       <header class="section-header">
         <div class="container">
           <h2 class="section-title">Somando tecnologia...</h2>
         </div>
       </header>
-      <div class="container content">
+      <div class="container content ov-h">
         <img src="imgs/technology.png" alt="" class="technology-picture u-max-full-width" />
         <ul class="technology-anchors">
-          <li><a href="https://datasciencebr.com/" class="technology-anchor twelve columns">Big Data</a></li>
-          <li><a href="http://blog.codeland.com.br/" class="technology-anchor twelve columns">Artigos</a></li>
-          <li><a href="http://dothack.codeland.com.br/" class="technology-anchor twelve columns">.Hack</a></li>
-          <li><a href="https://github.com/codelandev" class="technology-anchor twelve columns">Open Source</a></li>
-          <li><a href="https://vimeo.com/159885414" class="technology-anchor twelve columns">Rails workshop</a></li>
+          <li><a href="https://datasciencebr.com/" class="tech-big-data technology-anchor twelve columns">Big Data</a></li>
+          <li><a href="http://blog.codeland.com.br/" class="tech-articles technology-anchor twelve columns">Artigos</a></li>
+          <li><a href="http://dothack.codeland.com.br/" class="tech-hack technology-anchor twelve columns">.Hack</a></li>
+          <li><a href="https://github.com/codelandev" class="tech-open-source technology-anchor twelve columns">Open Source</a></li>
+          <li><a href="https://vimeo.com/159885414" class="tech-rails-workshop technology-anchor twelve columns">Rails workshop</a></li>
         </ul>
       </div>
     </section>
 
-    <section class="section" id="contact">
+    <section data-real-section class="section" id="contact">
       <header class="section-header">
         <div class="container">
           <h2 class="section-title">Com a sua ideia.</h2>
@@ -286,5 +296,7 @@
 
 </script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.slim.min.js"></script>
+<script src="js/particle.js"></script>
+<script src="js/in-view.js"></script>
 <script src="js/master.js"></script>
 </html>
